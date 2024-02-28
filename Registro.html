@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+
+    
+
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background: linear-gradient(to right, rgb(189, 189, 255), rgb(255, 233, 236));
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+            color: #ffbb00;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffbb00;
+        }
+
+        nav ul li a:hover {
+            color: #fff5a0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #ffbb00;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff9900;
+        }
+
+        .registrarse {
+            margin-top: 20px;
+        }
+
+        .registrarse a {
+            color: #008cff;
+            text-decoration: none;
+        }
+
+        .registrarse a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            clear: both; /* Añade esta propiedad para evitar superposiciones */
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registro de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a class="avtive" href="Registro.html">User Registrer</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preferencias.html">Diary</a></li>
+                <li><a href="galeria.html">Gallery</a></li>
+                <li><a href="artistas.html">Artist</a></li>
+                <li><a href="contacto.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form class="formulario" method="post" action="procesar_registro.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="email" required>
+
+            <label for="tipo_documento">Tipo de Documento:</label>
+            <select id="tipo_documento" name="tipo_documento" required>
+                <option value="Cedula">Cedula</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </select>
+
+            <label for="numero_documento">Número de Documento:</label>
+            <input type="text" id="numero_documento" name="numero_documento" required>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="date">Fecha de Nacimiento:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password_confirm">Repetir Contraseña:</label>
+            <input type="password" id="password_confirm" name="password_confirm" required>
+
+            <input type="submit" value="Enviar Registro">
+
+            <div class="registrarse">
+                <a href="#">¿Ya tiene una cuenta?</a>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p> Aprendiz Frank Monsalve <br>
+            Servicio Nacional de Aprendizaje - SENA<br>
+            Derechos reservados &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
+

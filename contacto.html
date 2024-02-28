@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Tattoo</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background: linear-gradient(to right, rgb(189, 189, 255), rgb(255, 233, 236));
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+            color: #ffbb00;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffbb00;
+        }
+
+        nav ul li a:hover {
+            color:  #fff5a0;
+        }
+
+        h1 {
+            background-color: black;
+            padding: 10px;
+            margin: 0;
+            color:  rgb(255, 191, 0);
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea,
+        select,
+        input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #ffbb00;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type=submit]:hover {
+            background-color: #ff9900;
+        }
+
+        .container {
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        /* NO ME DECIDO SI CENTRAR O ONO 
+        .container {
+            text-align: center;
+        }
+        */
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 10px;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            clear: both;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <h1>MASTER TATTOO</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Registro.html">User Registrer</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preferencias.html">Diary</a></li>
+                <li><a href="galeria.html">Gallery</a></li>
+                <li><a href="artistas.html">Artist</a></li>
+                <li><a class="active" href="contacto.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escriba aqui su nombre" required minlength="3">
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="nombre" placeholder="Escriba aqui su apellido" required minlength="3">
+            <label for="mail">Email: </label>
+            <input type="email" id="mail" name="mail" placeholder="Escriba aqui su email" required>
+            <label for="ciudad">Ciudad</label>
+            <select name="ciudad" id="ciudad">
+                <option value="Medellin">Medellin</option>
+                <option value="Bogota">Bogota</option>
+                <option value="Cucuta">Cucuta</option>
+                <option value="Manizales">Manizales</option>
+            </select>
+            <label for="comentario">Comentario: </label>
+            <textarea name="comentario" id="comentario" placeholder="Escriba aqui su comentario"></textarea>
+
+            <label>Motivo de contacto: </label><br>
+            <input type="radio" id="reclamos" name="motivo"><label for="reclamos">Reclamos</label><br>
+            <input type="radio" id="sugerencia" name="motivo"><label for="sugerencia">Sugerencia</label><br>
+            <input type="radio" id="ubicacion" name="motivo"><label for="ubicacion">Ubicacion</label><br>
+            <input type="radio" id="felicitaciones" name="motivo"><label for="felicitaciones">Felicitaciones</label><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p> Aprendiz Frank Monsalve <br>
+            Servicio Nacional de Aprendizaje - SENA<br>
+            Derechos reservados &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
