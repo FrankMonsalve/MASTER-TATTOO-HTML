@@ -56,6 +56,7 @@
            margin-top: 20px; /* Añado margen superior */
            margin-left: auto; /* Centro la tabla horizontalmente */
            margin-right: auto; /* Centro la tabla horizontalmente */
+           overflow-x: auto; /* Permite el desplazamiento horizontal en dispositivos móviles */
        }
 
        td, th {
@@ -73,8 +74,9 @@
            padding: 10px;
            text-align: center;
            width: 100%;
-           position: absolute;
+           position: fixed; /* Cambiado de absolute a fixed */
            bottom: 0;
+           margin-top: 20px; /* Agregado margen superior para evitar superposición */
        }
 
        /* Estilos para centrar el h2 */
